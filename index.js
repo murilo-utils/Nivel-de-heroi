@@ -57,6 +57,20 @@ async function waitTerminalInput(Ask){
 const hero_name = await waitTerminalInput("Qual o nome do herói?: ");
 const hero_exp = await waitTerminalInput("Qual é a experiência do herói?: ");
 
+// function to classify hero rank
+function rankHeroXP(exp, table){
+    // iterate over rank_table to classify the hero
+    // first iteration: determine if hero already exceeds maximum rank
+    for(let i = table.length; i > 0; i--){
+        if(!(table.length > i) && exp >= table[i - 1].thresholdMax){
+            return table[i - 1].name;
+        }
+        else if(table[i - 1].thresholdMin <= exp && exp <= table[i - 1].thresholdMax){
+            return table[i - 1].name;
+        }
+    }
+}
+
 /*
 Se XP for menor do que 1.000 = Ferro
 Se XP for entre 1.001 e 2.000 = Bronze
