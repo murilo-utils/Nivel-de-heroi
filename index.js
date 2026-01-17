@@ -71,6 +71,8 @@ function rankHeroXP(exp, table){
     }
 }
 
+const hero_rank = rankHeroXP(hero_exp, rank_table);
+
 /*
 Se XP for menor do que 1.000 = Ferro
 Se XP for entre 1.001 e 2.000 = Bronze
