@@ -53,6 +53,10 @@ async function waitTerminalInput(Ask){
     });
 }
 
+// take inputs from user
+const hero_name = await waitTerminalInput("Qual o nome do herói?: ");
+const hero_exp = await waitTerminalInput("Qual é a experiência do herói?: ");
+
 /*
 Se XP for menor do que 1.000 = Ferro
 Se XP for entre 1.001 e 2.000 = Bronze
