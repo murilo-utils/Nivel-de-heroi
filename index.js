@@ -1,7 +1,12 @@
 // Murilo Teixeira - 12/01/2026
 // Classificador de nível de herói
 
+import readline from "node:readline";
 
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
 
 // rank names and tresholds
 const rank_table = [
@@ -38,6 +43,7 @@ const rank_table = [
         thresholdMax: 10001
     }// 8 (more experience...)
 ];
+
 
 /*
 Se XP for menor do que 1.000 = Ferro
