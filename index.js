@@ -73,6 +73,9 @@ function rankHeroXP(exp, table){
 
 const hero_rank = rankHeroXP(hero_exp, rank_table);
 
+// output results to user
+console.log(`O Herói de nome ${hero_name} está no nível ${hero_rank}.`);
+
 /*
 Se XP for menor do que 1.000 = Ferro
 Se XP for entre 1.001 e 2.000 = Bronze
