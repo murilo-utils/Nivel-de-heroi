@@ -44,6 +44,14 @@ const rank_table = [
     }// 8 (more experience...)
 ];
 
+// async function to prevent race conditions
+async function waitTerminalInput(Ask){
+    return new Promise((resolve) => {
+        rl.question(Ask, (Answer) => {
+            resolve(Answer);
+        });
+    });
+}
 
 /*
 Se XP for menor do que 1.000 = Ferro
